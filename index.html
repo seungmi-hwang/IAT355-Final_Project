@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IAT336 • Induction Cover Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Nav -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top">
+        <span class="brand__dot">S</span>
+        <span class="brand__name">Slide&Store</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#weekly">Weekly</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Blog</a>
+      </nav>
+
+      <button class="cart" aria-label="Open menu">
+        <span class="cart__icon">🛒</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <h1 class="hero__title">
+            simply
+            <span class="hero__sub">induction cover</span>
+          </h1>
+
+          <p class="hero__tagline">
+            Space-saving modular stovetop cover for small kitchens — designed for renters.
+          </p>
+
+          <div class="pillrow">
+            <span class="pill">2-coil induction</span>
+            <span class="pill">slide & store</span>
+            <span class="pill">small kitchen</span>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="heroCard">
+            <img
+              class="heroCard__img"
+              src="assets/hero-placeholder.jpg"
+              alt="Project hero placeholder"
+            />
+            <div class="heroCard__overlay">
+              <div class="heroCard__miniTitle">Project Focus</div>
+              <div class="heroCard__miniText">Removable cover + expandable prep deck</div>
+            </div>
+          </div>
+
+          <!-- Side mini cards (like the reference) -->
+          <div class="sideStack">
+            <button class="sideItem" type="button">
+              <img src="assets/thumb1.jpg" alt="Week 1 thumbnail" />
+              <div>
+                <div class="sideItem__name">Week 1</div>
+                <div class="sideItem__meta">Sketch + Persona</div>
+              </div>
+              <span class="badge">new</span>
+            </button>
+
+            <button class="sideItem" type="button">
+              <img src="assets/thumb2.jpg" alt="Week 2 thumbnail" />
+              <div>
+                <div class="sideItem__name">Week 2</div>
+                <div class="sideItem__meta">Low-fi model</div>
+              </div>
+              <span class="badge badge--ghost">soon</span>
+            </button>
+
+            <button class="sideItem" type="button">
+              <img src="assets/thumb3.jpg" alt="Week 3 thumbnail" />
+              <div>
+                <div class="sideItem__name">Week 3</div>
+                <div class="sideItem__meta">1:1 prototype</div>
+              </div>
+              <span class="badge badge--ghost">soon</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section--light">
+      <div class="container section__grid">
+        <div>
+          <h2 class="h2">Simplifying life with the soft forms</h2>
+          <p class="muted">
+            Our project explores a reversible, removable stovetop cover designed for two-coil
+            induction stoves. The goal is to add prep space and integrated storage for renters
+            living in small apartments—without modifying the kitchen.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat__num">3</div>
+              <div class="stat__label">team members</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">6</div>
+              <div class="stat__label">weeks sprint</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num">2</div>
+              <div class="stat__label">fab processes</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="aboutCard">
+          <div class="aboutCard__title">Design pillars</div>
+          <ul class="checklist">
+            <li>Stable & reversible surface</li>
+            <li>Expandable prep workspace</li>
+            <li>Compact storage for tools</li>
+            <li>Human factors + small-kitchen context</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekly (auto render from JS) -->
+    <section id="weekly" class="section">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="h2">Weekly uploads</h2>
+          <p class="muted">Each week we post sketches, models, fabrication notes, and reflections.</p>
+        </div>
+
+        <div id="weeksGrid" class="grid"></div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="section section--dark">
+      <div class="container">
+        <div class="sectionHead sectionHead--dark">
+          <h2 class="h2 h2--light">Meet the team</h2>
+          <p class="muted muted--dark">
+            Week 1 focuses on each member’s initial sketch + persona insight.
+          </p>
+        </div>
+
+        <div class="teamGrid">
+          <article class="teamCard">
+            <div class="teamCard__top">
+              <img src="assets/member1.jpg" alt="Team member 1 photo placeholder" />
+            </div>
+            <div class="teamCard__body">
+              <h3 class="h3">Terry Lin</h3>
+              <p class="muted muted--dark">Role: ...</p>
+              <a class="link" href="#weekly">View Week 1 post →</a>
+            </div>
+          </article>
+
+          <article class="teamCard">
+            <div class="teamCard__top">
+              <img src="assets/member2.jpg" alt="Team member 2 photo placeholder" />
+            </div>
+            <div class="teamCard__body">
+              <h3 class="h3">Tristan Joung</h3>
+              <p class="muted muted--dark">Role: ...</p>
+              <a class="link" href="#weekly">View Week 1 post →</a>
+            </div>
+          </article>
+
+          <article class="teamCard">
+            <div class="teamCard__top">
+              <img src="assets/member3.jpg" alt="Team member 3 photo placeholder" />
+            </div>
+            <div class="teamCard__body">
+              <h3 class="h3">Seungmi Hwang</h3>
+              <p class="muted muted--dark">Role: ...</p>
+              <a class="link" href="#weekly">View Week 1 post →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <section id="contact" class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div class="footer__title">IAT336 • Team Blog</div>
+          <p class="muted">
+            Add weekly progress, images, and reflections. Replace placeholders with your real
+            sketches & photos.
+          </p>
+        </div>
+
+        <div class="footerBox">
+          <div class="footerBox__label">Next upload</div>
+          <div class="footerBox__big">Week 1</div>
+          <div class="footerBox__small">Initial sketches + persona</div>
+        </div>
+      </div>
+      <div class="container footer__bottom">
+        <span class="muted">© 2026 IAT 336 Final Project Team 2</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
