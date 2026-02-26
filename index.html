@@ -28,8 +28,8 @@
     </div>
   </header>
 
-  <!-- Hero -->
   <main id="top">
+    <!-- Hero -->
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__left">
@@ -51,21 +51,19 @@
 
         <div class="hero__right">
           <div class="heroCard">
-            <img
-              class="heroCard__img"
-              src="assets/hero-placeholder.jpg"
-              alt="Project hero placeholder"
-            />
+            <div class="heroCard__img placeholderHero">
+              Slide & Store<br/>Induction Prep Deck
+            </div>
             <div class="heroCard__overlay">
               <div class="heroCard__miniTitle">Project Focus</div>
               <div class="heroCard__miniText">Removable cover + expandable prep deck</div>
             </div>
           </div>
 
-          <!-- Side mini cards (like the reference) -->
+          <!-- Side mini cards -->
           <div class="sideStack">
-            <button class="sideItem" type="button">
-              <img src="assets/thumb1.jpg" alt="Week 1 thumbnail" />
+            <button class="sideItem" type="button" onclick="location.href='#weekly'">
+              <div class="sideThumb">W1</div>
               <div>
                 <div class="sideItem__name">Week 1</div>
                 <div class="sideItem__meta">Sketch + Persona</div>
@@ -73,8 +71,8 @@
               <span class="badge">new</span>
             </button>
 
-            <button class="sideItem" type="button">
-              <img src="assets/thumb2.jpg" alt="Week 2 thumbnail" />
+            <button class="sideItem" type="button" onclick="location.href='#weekly'">
+              <div class="sideThumb">W2</div>
               <div>
                 <div class="sideItem__name">Week 2</div>
                 <div class="sideItem__meta">Low-fi model</div>
@@ -82,8 +80,8 @@
               <span class="badge badge--ghost">soon</span>
             </button>
 
-            <button class="sideItem" type="button">
-              <img src="assets/thumb3.jpg" alt="Week 3 thumbnail" />
+            <button class="sideItem" type="button" onclick="location.href='#weekly'">
+              <div class="sideThumb">W3</div>
               <div>
                 <div class="sideItem__name">Week 3</div>
                 <div class="sideItem__meta">1:1 prototype</div>
@@ -134,7 +132,7 @@
       </div>
     </section>
 
-    <!-- Weekly (auto render from JS) -->
+    <!-- Weekly -->
     <section id="weekly" class="section">
       <div class="container">
         <div class="sectionHead">
@@ -152,55 +150,46 @@
         <div class="sectionHead sectionHead--dark">
           <h2 class="h2 h2--light">Meet the team</h2>
           <p class="muted muted--dark">
-            Week 1 focuses on each member’s initial sketch + persona insight.
+            Roles will be finalized as the project develops.
           </p>
         </div>
 
         <div class="teamGrid">
           <article class="teamCard">
-            <div class="teamCard__top">
-              <img src="assets/member1.jpg" alt="Team member 1 photo placeholder" />
-            </div>
+            <div class="teamCard__top placeholderBox">Profile TBD</div>
             <div class="teamCard__body">
               <h3 class="h3">Terry Lin</h3>
-              <p class="muted muted--dark">Role: ...</p>
-              <a class="link" href="#weekly">View Week 1 post →</a>
+              <p class="muted muted--dark">Role: TBD</p>
             </div>
           </article>
 
           <article class="teamCard">
-            <div class="teamCard__top">
-              <img src="assets/member2.jpg" alt="Team member 2 photo placeholder" />
-            </div>
+            <div class="teamCard__top placeholderBox">Profile TBD</div>
             <div class="teamCard__body">
               <h3 class="h3">Tristan Joung</h3>
-              <p class="muted muted--dark">Role: ...</p>
-              <a class="link" href="#weekly">View Week 1 post →</a>
+              <p class="muted muted--dark">Role: TBD</p>
             </div>
           </article>
 
           <article class="teamCard">
-            <div class="teamCard__top">
-              <img src="assets/member3.jpg" alt="Team member 3 photo placeholder" />
-            </div>
+            <div class="teamCard__top placeholderBox">Profile TBD</div>
             <div class="teamCard__body">
               <h3 class="h3">Seungmi Hwang</h3>
-              <p class="muted muted--dark">Role: ...</p>
-              <a class="link" href="#weekly">View Week 1 post →</a>
+              <p class="muted muted--dark">Role: TBD</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Contact / Footer -->
+    <!-- Footer -->
     <section id="contact" class="footer">
       <div class="container footer__grid">
         <div>
           <div class="footer__title">IAT336 • Team Blog</div>
           <p class="muted">
-            Add weekly progress, images, and reflections. Replace placeholders with your real
-            sketches & photos.
+            Add weekly progress, images, and reflections. You can upload images later—this
+            layout stays stable even without assets.
           </p>
         </div>
 
@@ -210,6 +199,7 @@
           <div class="footerBox__small">Initial sketches + persona</div>
         </div>
       </div>
+
       <div class="container footer__bottom">
         <span class="muted">© 2026 IAT 336 Final Project Team 2</span>
       </div>
