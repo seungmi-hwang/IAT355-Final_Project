@@ -49,12 +49,36 @@ const weeks = [
   },
   {
     week: "Week 2",
-    title: "Low-fidelity Scale Model",
+    title: "Refined Sketches After Feedback",
     date: "Mar 5, 2026",
-    tags: ["Scale model", "Testing"],
-    description: "Placeholder (images will be added later).",
-    images: [],
-    sections: []
+    tags: ["Refinement", "Feedback", "Sketch"],
+    description:
+      "Week 2 shows revised concept sketches developed after receiving feedback on the initial ideas. The updated concepts focus more clearly on removable interaction, compact storage, and improved usability for small rental kitchens.",
+
+    banner: "assets/Terry_week2.png",
+
+    images: [
+      {
+        src: "assets/Terry_week2.png",
+        caption: "Terry — refined concept exploring a roll-out wooden cover integrated with the induction unit"
+      },
+      {
+        src: "assets/Mia_Week2.png",
+        caption: "Mia — refined concept showing a detachable roll-up prep surface with compact storage"
+      }
+    ],
+
+    sections: [
+      {
+        heading: "How the concepts changed",
+        bullets: [
+          "Revised the original ideas based on Week 1 feedback",
+          "Explored more compact and integrated forms",
+          "Focused on removable and renter-friendly interaction",
+          "Considered how the prep surface can be stored when not in use"
+        ]
+      }
+    ]
   },
   {
     week: "Week 3",
