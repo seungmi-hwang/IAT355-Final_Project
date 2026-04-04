@@ -5,33 +5,45 @@ const weeks = [
     date: "Feb 26, 2026",
     tags: ["Sketch", "Persona", "Ideation"],
     description:
-      "Week 1 includes three initial sketches and our shared persona for a small-kitchen renter context.",
+      "Week 1 presents three early concept directions for a removable induction cover designed for renters with limited counter space.",
 
-    // Week 1 배너 이미지
     banner: "assets/Mia.png",
 
     images: [
-      { src: "assets/Terry.png", caption: "Terry — initial sketch" },
-      { src: "assets/Tristan.jpg", caption: "Tristan — initial sketch" },
-      { src: "assets/Mia.png", caption: "Mia — initial sketch" }
+      {
+        src: "assets/Terry.png",
+        caption: "Concept 1 — expandable prep surface with folding legs"
+      },
+      {
+        src: "assets/Tristan.jpg",
+        caption: "Concept 2 — removable cover with storage and silicone trim"
+      },
+      {
+        src: "assets/Mia.png",
+        caption: "Concept 3 — sliding cutting board interaction"
+      }
     ],
 
-    // Persona bullet
     persona: [
       "26-year-old graduate student living in Vancouver",
       "Lives in a small one-bedroom rental apartment",
-      "Compact kitchen with limited counter space + a 2-coil induction stove",
-      "Cooks at home 5+ times/week to save money and eat healthy",
-      "Pain points: not enough prep space, cluttered counters, limited storage for tools",
-      "Cannot modify the rental unit (needs a removable/reversible solution)",
+      "Compact kitchen with limited counter space and a 2-coil induction stove",
+      "Cooks at home 5+ times per week to save money and eat healthy",
+      "Pain points: not enough prep space, cluttered counters, limited storage for kitchen tools",
+      "Cannot modify the rental unit, so the solution must be removable and reversible",
       "Needs a space-efficient surface that expands for prep and retracts for cooking",
       "Values safety, organization, smooth transitions, one-hand operation, and stability"
     ],
 
     sections: [
       {
-        heading: "What we uploaded",
-        bullets: ["3 initial sketches", "1 persona paragraph", "Key constraints + assumptions"]
+        heading: "What we explored",
+        bullets: [
+          "Removable induction cover for a rental-friendly kitchen setup",
+          "Sliding extension to create a larger preparation surface",
+          "Silicone trim for heat resistance, grip, and stability",
+          "Compact interaction ideas that do not require permanent installation"
+        ]
       }
     ]
   },
@@ -64,26 +76,24 @@ function escapeHtml(str) {
     .replaceAll("'", "&#039;");
 }
 
-/* Gallery */
 function makeGallery(images) {
   if (!images || images.length === 0) return "";
-  const items = images
-    .map(
-      (img) => `
+
+  const items = images.map((img) => `
     <div class="weekGallery__item">
       <img src="${escapeHtml(img.src)}" alt="${escapeHtml(img.caption || "Week image")}" />
       <div class="weekGallery__cap">${escapeHtml(img.caption || "")}</div>
     </div>
-  `
-    )
-    .join("");
+  `).join("");
+
   return `<div class="weekGallery">${items}</div>`;
 }
 
-/* Persona box */
 function makePersona(persona, id) {
   if (!persona || persona.length === 0) return "";
+
   const li = persona.map((p) => `<li>${escapeHtml(p)}</li>`).join("");
+
   return `
     <div id="${escapeHtml(id)}" style="display:none; margin-top:12px;">
       <div style="padding:14px; border:1px solid #0000001A; border-radius:18px; background:#00000005;">
@@ -98,17 +108,15 @@ function makePersona(persona, id) {
 
 function makeDetail(w, id) {
   const gallery = makeGallery(w.images);
-
-  // persona 영역 id
   const personaId = `persona-${id}`;
   const personaBox = makePersona(w.persona, personaId);
 
-  const sections = (w.sections || [])
-    .map((sec) => {
-      const bullets = (sec.bullets || [])
-        .map((b) => `<li>${escapeHtml(b)}</li>`)
-        .join("");
-      return `
+  const sections = (w.sections || []).map((sec) => {
+    const bullets = (sec.bullets || [])
+      .map((b) => `<li>${escapeHtml(b)}</li>`)
+      .join("");
+
+    return `
       <div style="margin-top:12px; padding:12px; border:1px solid #0000001A; border-radius:18px; background:#00000005;">
         <div style="font-weight:900; margin-bottom:6px;">${escapeHtml(sec.heading)}</div>
         <ul style="margin:0; padding-left:18px; font-weight:650; color:#6a665c;">
@@ -116,8 +124,7 @@ function makeDetail(w, id) {
         </ul>
       </div>
     `;
-    })
-    .join("");
+  }).join("");
 
   return `
     <div id="${escapeHtml(id)}" style="display:none; margin-top:14px;">
@@ -132,49 +139,44 @@ function makeWeekCard(w) {
   const detailId = `detail-${w.week.replace(/\s+/g, "-").toLowerCase()}`;
   const personaToggleId = `persona-${detailId}`;
 
-  // Week 1 배너: banner가 있으면 이미지로, 없으면 텍스트
   const media = w.banner
-    ? `<img src="${escapeHtml(w.banner)}" alt="${escapeHtml(w.week)} banner"
-         style="width:100%; height:100%; object-fit:cover; display:block;">`
+    ? `<img src="${escapeHtml(w.banner)}" alt="${escapeHtml(w.week)} banner">`
     : `<div style="font-weight:900;">${escapeHtml(w.week)}</div>`;
 
-  // tags를 버튼/텍스트로 (Persona만 토글 버튼)
-  const tagButtons = (w.tags || [])
-    .map((t) => {
-      if (t === "Persona") {
-        return `<button class="weekPill" type="button" data-persona="${personaToggleId}">Persona</button>`;
-      }
-      return `<span class="weekPill">${escapeHtml(t)}</span>`;
-    })
-    .join("");
+  const tagButtons = (w.tags || []).map((t) => {
+    if (t === "Persona") {
+      return `<button class="weekPill" type="button" data-persona="${personaToggleId}">Persona</button>`;
+    }
+    return `<span class="weekPill">${escapeHtml(t)}</span>`;
+  }).join("");
 
   return `
-  <article class="weekCard">
-    <div class="weekCard__media">
-      ${media}
-    </div>
-
-    <div class="weekCard__body">
-      <div class="weekCard__meta">
-        <span class="weekPill">${escapeHtml(w.week)}</span>
-        <span class="weekPill">${escapeHtml(w.date)}</span>
+    <article class="weekCard">
+      <div class="weekCard__media">
+        ${media}
       </div>
 
-      <div class="weekCard__title">${escapeHtml(w.title)}</div>
-      <p class="weekCard__desc">${escapeHtml(w.description)}</p>
+      <div class="weekCard__body">
+        <div class="weekCard__meta">
+          <span class="weekPill">${escapeHtml(w.week)}</span>
+          <span class="weekPill">${escapeHtml(w.date)}</span>
+        </div>
 
-      <div class="weekCard__btnRow">
-        <button class="btn btn--dark" data-open="${detailId}">Open</button>
-        <a class="btn" href="#team">Team</a>
+        <div class="weekCard__title">${escapeHtml(w.title)}</div>
+        <p class="weekCard__desc">${escapeHtml(w.description)}</p>
+
+        <div class="weekCard__btnRow">
+          <button class="btn btn--dark" data-open="${detailId}">Open</button>
+          <a class="btn" href="#team">Team</a>
+        </div>
+
+        <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
+          ${tagButtons}
+        </div>
+
+        ${makeDetail(w, detailId)}
       </div>
-
-      <div style="margin-top:12px; display:flex; gap:8px; flex-wrap:wrap;">
-        ${tagButtons}
-      </div>
-
-      ${makeDetail(w, detailId)}
-    </div>
-  </article>
+    </article>
   `;
 }
 
@@ -183,7 +185,6 @@ function renderWeeks() {
   grid.innerHTML = weeks.map(makeWeekCard).join("");
 
   grid.addEventListener("click", (e) => {
-    // Open/Close
     const btn = e.target.closest("[data-open]");
     if (btn) {
       const id = btn.getAttribute("data-open");
@@ -194,13 +195,11 @@ function renderWeeks() {
       return;
     }
 
-    // Persona toggle
     const pbtn = e.target.closest("[data-persona]");
     if (pbtn) {
       const pid = pbtn.getAttribute("data-persona");
       const personaPanel = document.getElementById(pid);
 
-      // detail이 닫혀있으면 먼저 열기
       const detailPanel = pbtn.closest(".weekCard__body")?.querySelector('[id^="detail-"]');
       if (detailPanel && detailPanel.style.display !== "block") {
         detailPanel.style.display = "block";
@@ -213,7 +212,6 @@ function renderWeeks() {
       return;
     }
 
-    // Image focus (click to enlarge, hide others)
     const imgItem = e.target.closest(".weekGallery__item");
     if (imgItem) {
       const gallery = imgItem.closest(".weekGallery");
@@ -221,23 +219,19 @@ function renderWeeks() {
 
       const isFocused = imgItem.classList.contains("is-focused");
 
-      // reset
       gallery.querySelectorAll(".weekGallery__item").forEach((item) => {
         item.classList.remove("is-focused");
         item.classList.remove("is-hidden");
       });
 
-      // toggle close
       if (isFocused) return;
 
-      // focus
       imgItem.classList.add("is-focused");
       gallery.querySelectorAll(".weekGallery__item").forEach((item) => {
         if (item !== imgItem) item.classList.add("is-hidden");
       });
 
       imgItem.scrollIntoView({ behavior: "smooth", block: "center" });
-      return;
     }
   });
 }
