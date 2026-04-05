@@ -7,19 +7,19 @@ const weeks = [
     description:
       "Week 1 presents three early concept directions for a removable induction cover designed for renters with limited counter space.",
 
-    banner: "assets/Mia.png",
+    banner: "assets/Mia_1.jpg",
 
     images: [
       {
-        src: "assets/Terry.png",
+        src: "assets/Terry_1.jpeg",
         caption: "Concept 1 — expandable prep surface with folding legs"
       },
       {
-        src: "assets/Tristan.jpg",
+        src: "assets/Tristan_1.jpg",
         caption: "Concept 2 — removable cover with storage and silicone trim"
       },
       {
-        src: "assets/Mia.png",
+        src: "assets/Mia_1.jpg",
         caption: "Concept 3 — sliding cutting board interaction"
       }
     ],
@@ -55,16 +55,20 @@ const weeks = [
     description:
       "Week 2 shows revised concept sketches developed after receiving feedback on the initial ideas. The updated concepts focus more clearly on removable interaction, compact storage, and improved usability for small rental kitchens.",
 
-    banner: "assets/Terry_week2.png",
+    banner: "assets/Terry.png",
 
     images: [
       {
-        src: "assets/Terry_week2.png",
-        caption: "Terry — refined concept exploring a roll-out wooden cover integrated with the induction unit"
+        src: "assets/Terry.png",
+        caption: "Terry — refined concept after feedback, improving structure stability and simplifying the overall form"
       },
       {
-        src: "assets/Mia_Week2.png",
-        caption: "Mia — refined concept showing a detachable roll-up prep surface with compact storage"
+        src: "assets/Mia.png",
+        caption: "Mia — refined concept after feedback, focusing on clearer sliding interaction and improved usability"
+      },
+      {
+        src:"assets/Tristan.jpg",
+        caption:"Tristan — refined concept after feedback, improving spatial layout and enhancing sliding mechanism"
       }
     ],
 
@@ -86,7 +90,18 @@ const weeks = [
     date: "Mar 12, 2026",
     tags: ["Iteration", "Sketch", "Development"],
     description: "Week 3 continues the design iteration process, refining the concept based on feedback and exploring more feasible interaction and structure.",
-    images: [],
+    banner: "assets/Mia_week2.png",
+    images: [
+      {
+         src:"assets/Terry_week2.png",
+         description:"Terry — refined concept exploring a roll-out wooden cover integrated with the induction unit",
+
+      },
+      {
+        src:"assets/Mia_week2.png",
+        description:"Mia — refined concept showing a detachable roll-up prep surface with compact storage",
+      }
+    ],
     sections: []
   },
 
