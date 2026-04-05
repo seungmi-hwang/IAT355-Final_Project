@@ -82,12 +82,84 @@ const weeks = [
   },
   {
     week: "Week 3",
-    title: "1:1 Medium-fidelity Prototype",
-    date: "Mar 19, 2026",
-    tags: ["1:1", "Laser cut", "3D print"],
-    description: "Placeholder (images will be added later).",
+    title: "Design Iteration & Refinement",
+    date: "Mar 12, 2026",
+    tags: ["Iteration", "Sketch", "Development"],
+    description: "Week 3 continues the design iteration process, refining the concept based on feedback and exploring more feasible interaction and structure.",
     images: [],
     sections: []
+  },
+
+  {
+    //first propotype
+    week: "Week 4",
+    title: "1:1 low-fidelity Prototype",
+    data: "Mar 19, 2026",
+    tag: ["Low-fi", "Mechanism", "Prototype"],
+    description:
+     "Week 4 introduces low-fidelity prototyping to test structural ideas. We explored mechanisms such as preventing sideways movement and integrating silicone for stability and protection.",
+    images: [
+      {
+        src:"assets/Week4.png",
+        caption:"Refined mechanism sketch - preventing sideways movement and improving structural stability"
+      }
+    ],
+    sections:[
+      {
+        heading: "Key Improvements",
+        bullets: [
+          "Introduced structure to prevent sideways movement",
+          "Explored attachment mechanism between parts",
+          "Added silicone layer for protection and grip",
+          "Refined material combination (wood + silicone)"
+        ]
+      }
+    ]
+  },
+  {
+    // refelect feedback - a second propotype
+    week: "Week 5",
+    title: "Concept Development & Mechanism Refinement",
+    date: "Mar 26",
+    tag: ["Mechanism", "low-Fidelity"],
+    description:
+    "Week 5 focuses on refining the mechanism of the design. We explored structural details such as preventing sideways movement, integrating silicone protection, and improving attachment between components.",
+    image: [
+      {
+        src:"assets/Week4.png",
+        caption:"Refined mechanism sketch - preventing sideways movement and improving structural stability"
+      }
+    ],
+    sections: [
+      {
+        heading: "Key Improvements",
+        bullets: [
+          "Introduced structure to prevent sideways movement",
+          "Explored attachment mechanism between parts",
+          "Added silicone layer for protection and grip",
+          "Refined material combination (wood + silicone)"
+        ]
+      }
+    ]
+  },
+  {
+    week:"Week 6",
+    title:"CAD Modeling & Fabrication",
+    date: "April 2",
+    tags:["CAD", "OnShape", "Laser Cutting", "Medium-fi"],
+    description:
+    "Week 6 focuses on translating the final concept into a medium-fidelity prototype. The design is modeled in Onshape and prepared for laser cutting fabrication.",
+    images: [
+      {
+        src: "assets/Week6.png",
+        caption: "CAD model created in Onshape and final concept design"
+      }
+    ],
+    sections: [
+      {
+        heading: "What we implemented",
+      }
+    ]
   }
 ];
 
