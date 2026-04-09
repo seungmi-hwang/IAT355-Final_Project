@@ -219,7 +219,7 @@ a{ color: inherit; text-decoration: none; }
   font-weight: 900;
 }
 .h2--light{ color: #F7F2E6; }
-.h3{ margin:0; font-weight: 900; }
+.h3{ margin:0; font-weight: 900; color: #E9E2D6;}
 
 .muted{
   color: var(--muted);

@@ -90,7 +90,7 @@ const weeks = [
     date: "Mar 12, 2026",
     tags: ["Iteration", "Sketch", "Development"],
     description: "Week 3 continues the design iteration process, refining the concept based on feedback and exploring more feasible interaction and structure.",
-    banner: "assets/Mia_week2.png",
+    banner: "assets/Mia_Week2.png",
     images: [
       {
          src:"assets/Terry_week2.png",
@@ -98,7 +98,7 @@ const weeks = [
 
       },
       {
-        src:"assets/Mia_week2.png",
+        src:"assets/Mia_Week2.png",
         description:"Mia — refined concept showing a detachable roll-up prep surface with compact storage",
       }
     ],
