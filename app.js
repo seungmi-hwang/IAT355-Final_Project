@@ -113,9 +113,10 @@ const weeks = [
     tag: ["Low-fi", "Mechanism", "Prototype"],
     description:
      "Week 4 introduces low-fidelity prototyping to test structural ideas. We explored mechanisms such as preventing sideways movement and integrating silicone for stability and protection.",
+     banner: "assets/week4.png",
     images: [
       {
-        src:"assets/Week4.png",
+        src:"assets/week4.png",
         caption:"Refined mechanism sketch - preventing sideways movement and improving structural stability"
       }
     ],
@@ -139,9 +140,10 @@ const weeks = [
     tag: ["Mechanism", "low-Fidelity"],
     description:
     "Week 5 focuses on refining the mechanism of the design. We explored structural details such as preventing sideways movement, integrating silicone protection, and improving attachment between components.",
+    banner: "assets/week5.png",
     image: [
       {
-        src:"assets/Week4.png",
+        src:"assets/week5.png",
         caption:"Refined mechanism sketch - preventing sideways movement and improving structural stability"
       }
     ],
