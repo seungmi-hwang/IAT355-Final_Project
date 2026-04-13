@@ -1,9 +1,9 @@
 :root{
   --bg: #B9BEA0;
-  --bg2:#F2EFE6;
-  --dark:#2A2722;
+  --bg2:#ffffff;
+  --dark: #4AC452;
   --stroke:#0000001A;
-  --text:#1e1d1a;
+  --text:#000000;
   --muted:#6a665c;
   --radius: 28px;
 }
@@ -14,7 +14,7 @@ html,body{
   padding:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
   color:var(--text);
-  background: var(--bg2);
+  background: #ffffff;
 }
 a{ color: inherit; text-decoration: none; }
 
@@ -25,7 +25,7 @@ a{ color: inherit; text-decoration: none; }
   position: sticky;
   top:0;
   z-index:50;
-  background: color-mix(in oklab, var(--bg) 72%, white 28%);
+  background: #0d0d0d;
   border-bottom: 1px solid var(--stroke);
   backdrop-filter: blur(10px);
 }
@@ -35,35 +35,24 @@ a{ color: inherit; text-decoration: none; }
   justify-content:space-between;
   padding:14px 0;
 }
-.brand{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:700;
-}
-.brand__dot{
-  width:28px;
-  height:28px;
-  border-radius:10px;
-  display:grid;
-  place-items:center;
-  background:#00000012;
-}
+
 .nav{
   display:flex;
   gap:18px;
   font-weight:600;
+  color: #4AC452;
 }
 .nav a{ opacity:.85; }
 .nav a:hover{
   opacity:1;
   text-decoration: underline;
+  color: #ffffff;
 }
 
 
 /* Hero */
 .hero{
-  background: var(--bg);
+  background: #0d0d0d;
   padding: 36px 0 46px;
   border-bottom-left-radius: 46px;
   border-bottom-right-radius: 46px;
@@ -89,11 +78,13 @@ a{ color: inherit; text-decoration: none; }
   font-size: clamp(18px, 2.2vw, 26px);
   margin-top: 10px;
   opacity: .95;
+  color: #4AC452;
 }
 .hero__tagline{
+  font-family: "Givonic";
   margin: 16px 0 16px;
   max-width: 48ch;
-  color: #2a2722;
+  color: #ffffff;
   font-weight: 600;
 }
 .pillrow{
@@ -102,7 +93,7 @@ a{ color: inherit; text-decoration: none; }
   gap:10px;
 }
 .pill{
-  background:#ffffff66;
+  background:#4AC452;
   border:1px solid var(--stroke);
   border-radius: 999px;
   padding: 10px 12px;
@@ -132,14 +123,14 @@ a{ color: inherit; text-decoration: none; }
   position:absolute;
   left:14px;
   bottom:14px;
-  background:#ffffffb8;
+  background:#4AC452;
   border:1px solid var(--stroke);
   border-radius: 18px;
   padding: 12px 14px;
 }
 .heroCard__miniTitle{ font-weight: 900; }
 .heroCard__miniText{
-  color: var(--muted);
+  color: #000000;
   font-weight: 700;
   font-size: 13px;
   margin-top:4px;
@@ -211,8 +202,9 @@ a{ color: inherit; text-decoration: none; }
   font-size: clamp(26px, 3vw, 36px);
   letter-spacing: -0.02em;
   font-weight: 900;
+  font-family: "Givonic";
 }
-.h2--light{ color: #F7F2E6; }
+.h2--light{ color: #000000; }
 .h3{ margin:0; font-weight: 900; color: #E9E2D6;}
 
 .muted{
@@ -239,25 +231,28 @@ a{ color: inherit; text-decoration: none; }
   flex-wrap:wrap;
 }
 .stat{
-  background:#fff;
+  background:#4AC452;
   border:1px solid var(--stroke);
   border-radius: 22px;
   padding: 12px 14px;
   min-width: 140px;
 }
 .stat__num{
+  font-family: "Givonic";
   font-size: 28px;
   font-weight: 900;
+  color: #000000;
 }
 .stat__label{
-  color: var(--muted);
+  font-family: "Simplon Mono";
+  color: #000000;
   font-weight: 800;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: .06em;
 }
 .aboutCard{
-  background:#fff;
+  background:#4AC452;
   border:1px solid var(--stroke);
   border-radius: var(--radius);
   padding: 18px;
@@ -282,7 +277,7 @@ a{ color: inherit; text-decoration: none; }
   gap: 14px;
 }
 .weekCard{
-  background:#fff;
+  background:#000000;
   border:1px solid var(--stroke);
   border-radius: var(--radius);
   overflow:hidden;
@@ -315,7 +310,7 @@ a{ color: inherit; text-decoration: none; }
   margin-bottom: 10px;
 }
 .weekPill{
-  background:#00000008;
+  background:#4AC452;
   border:1px solid var(--stroke);
   padding: 7px 10px;
   border-radius: 999px;
@@ -326,6 +321,7 @@ a{ color: inherit; text-decoration: none; }
   font-weight: 900;
   font-size: 18px;
   margin: 6px 0 8px;
+  color: #ffffff;
 }
 .weekCard__desc{
   margin:0;
@@ -333,6 +329,7 @@ a{ color: inherit; text-decoration: none; }
   font-weight: 650;
 }
 .weekCard__btnRow{
+
   margin-top: 12px;
   display:flex;
   gap:10px;
@@ -347,7 +344,7 @@ a{ color: inherit; text-decoration: none; }
   border:1px solid var(--stroke);
   font-weight: 900;
   cursor:pointer;
-  background:#fff;
+  background:#4AC452;
 }
 .btn--dark{
   background: var(--dark);
@@ -363,7 +360,7 @@ a{ color: inherit; text-decoration: none; }
   gap: 14px;
 }
 .teamCard{
-  background:#ffffff12;
+  background:#000000;
   border:1px solid #ffffff22;
   border-radius: var(--radius);
   overflow:hidden;
@@ -383,9 +380,10 @@ a{ color: inherit; text-decoration: none; }
   background: var(--bg2);
   padding: 44px 0 22px;
 }
+
 .footer__grid{
   display:grid;
-  grid-template-columns: 1.2fr .8fr;
+  grid-template-columns: 1fr;
   gap: 18px;
   align-items: start;
 }

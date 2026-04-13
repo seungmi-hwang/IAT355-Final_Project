@@ -141,11 +141,16 @@ const weeks = [
     description:
     "Week 5 focuses on refining the mechanism of the design. We explored structural details such as preventing sideways movement, integrating silicone protection, and improving attachment between components.",
     banner: "assets/week5.png",
-    image: [
+    images: [
       {
         src:"assets/week5.png",
         caption:"Refined mechanism sketch - preventing sideways movement and improving structural stability"
-      }
+      },
+
+      {
+        src:"assets/illuste.png",
+        caption:"illustrator file prior to lazer cut for the wooden frame of physical model",
+      },
     ],
     sections: [
       {
@@ -163,14 +168,43 @@ const weeks = [
     week:"Week 6",
     title:"CAD Modeling & Fabrication",
     date: "April 2",
+    banner:"assets/cad.png",
     tags:["CAD", "OnShape", "Laser Cutting", "Medium-fi"],
     description:
     "Week 6 focuses on translating the final concept into a medium-fidelity prototype. The design is modeled in Onshape and prepared for laser cutting fabrication.",
     images: [
       {
         src: "assets/Week6.png",
-        caption: "CAD model created in Onshape and final concept design"
+        caption: "CAD model created in Onshape and final concept design",
+      },
+      {src:"assets/lazer.png",
+        caption:"Lazer cut physical components of the final model",
+      },
+    ],
+    sections: [
+      {
+        heading: "What we implemented",
       }
+    ]
+  },
+  {
+    week:"Week 7",
+    title:"Final Physical Model",
+    date: "April 9",
+    banner: "assets/final.png",
+    tags:["Laser Cutting", "Medium-fi"],
+    description:
+    "Week 7 focuses on polishing and combining physical components into our final model.",
+    images: [
+      {
+        src:"assets/final2.png",
+        caption:"Physical model with silicone mat rolled up",
+      },
+
+      {src: "assets/final3.png",
+        caption: "Exploded view of final physical model",
+      },
+
     ],
     sections: [
       {
@@ -178,6 +212,8 @@ const weeks = [
       }
     ]
   }
+
+  
 ];
 
 function escapeHtml(str) {
